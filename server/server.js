@@ -3,11 +3,10 @@ const path = require('path');
 
 const app = express();
 
-const PORT = 3009;
+const PORT = process.env.port || 80;
 
 
 app.use((req, res, next) => {
-  console.log(req.url)
   if (req.url === '/') {
     res.redirect(301, req.url + '?productId=P001');
   }
