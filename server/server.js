@@ -7,7 +7,6 @@ const PORT = process.env.PORT || 80;
 
 
 app.use((req, res, next) => {
-  console.log(req.url)
   if (req.url === '/') {
     res.redirect(301, req.url + '?productId=P001');
   }
