@@ -2,7 +2,7 @@ FROM node:13.8.0
 
 WORKDIR /code
 
-ENV PORT 3009
+ENV PORT 80
 
 COPY package.json /code/package.json
 
