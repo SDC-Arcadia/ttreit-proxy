@@ -3,8 +3,9 @@ const path = require('path');
 
 const app = express();
 
-const PORT = process.env.port || 80;
+const PORT = process.env.PORT || 80;
 
+app.use(express.static(path.join(__dirname, '../client')));
 
 app.use((req, res, next) => {
   if (req.url === '/') {
@@ -13,7 +14,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.static(path.join(__dirname, '../client')));
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
