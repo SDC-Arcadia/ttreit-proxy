@@ -1,2 +1,5 @@
 node_modules
 index2.html
+newrelic.js
+*.log
+k6/*
